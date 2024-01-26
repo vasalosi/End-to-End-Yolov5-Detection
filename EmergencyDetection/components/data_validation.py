@@ -25,8 +25,10 @@ class DataValidation:
             validation_status = None
 
             all_files = os.listdir(self.data_ingestion_artifact.feature_store_path)
+            logging.info(f"Entered the validation_all_files_exist method of DataValidation class all files exist: {all_files}")
 
             for file in all_files:
+                logging.info(f"Entered the for loop validation_all_files_exist method of DataValidation class all files exist: {all_files} for file: {file}")
                 if file not in self.data_validation_config.required_file_list:
                     validation_status = False
                     os.makedirs(self.data_validation_config.data_validation_dir, exist_ok=True)
