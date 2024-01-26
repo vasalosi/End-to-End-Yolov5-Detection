@@ -1,5 +1,4 @@
-import sys
-import os
+import sys, os
 from EmergencyDetection.logger import logging
 from EmergencyDetection.exception import AppException
 from EmergencyDetection.components.data_ingestion import DataIngestion
@@ -65,7 +64,9 @@ class TrainPipeline:
 
 
     def run_pipeline(self) -> None:
+        logging.info(f"Entered the run_pipeline method of TrainPipeline class")
         try:
+            logging.info(f"Entered the try of the run_pipeline method of TrainPipeline class")
             data_ingestion_artifact = self.start_data_ingestion()
             data_validation_artifact = self.start_data_validation(
                 data_ingestion_artifact=data_ingestion_artifact
