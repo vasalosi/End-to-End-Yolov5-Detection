@@ -24,7 +24,7 @@ DATA_VALIDATION_DIR_NAME: str = "data_validation"
 
 DATA_VALIDATION_STATUS_FILE = 'status.txt'
 
-DATA_VALIDATION_ALL_REQUIRED_FILES = ["train", "valid", "data.yaml"]
+DATA_VALIDATION_ALL_REQUIRED_FILES = ["train", "val", "data.yaml"]
 
 
 
