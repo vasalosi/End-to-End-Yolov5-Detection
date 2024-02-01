@@ -10,7 +10,7 @@ DATA_INGESTION_DIR_NAME: str = "data_ingestion"
 DATA_INGESTION_FEATURE_STORE_DIR: str = "feature_store"
 
 #DATA_DOWNLOAD_URL: str = "https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUBTjC-2vf61/view?usp=share_link"
-DATA_DOWNLOAD_URL: str = "https://drive.google.com/file/d/1-PcgDZPg8lqEFFlJOpUbLefvBlhfTifF/view?usp=sharing"
+DATA_DOWNLOAD_URL: str = "https://drive.google.com/file/d/1JWSKGaCTFch4bGpO0xTpHZG4v8LhL3Uk/view?usp=sharing"
 
 
 
@@ -24,7 +24,7 @@ DATA_VALIDATION_DIR_NAME: str = "data_validation"
 
 DATA_VALIDATION_STATUS_FILE = 'status.txt'
 
-DATA_VALIDATION_ALL_REQUIRED_FILES = ["train", "val", "data.yaml"]
+DATA_VALIDATION_ALL_REQUIRED_FILES = ["train", "valid", "data.yaml"]
 
 
 
