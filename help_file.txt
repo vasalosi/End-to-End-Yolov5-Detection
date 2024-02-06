@@ -1,0 +1,39 @@
+$ pwd
+/C/Users/vasal/End-to-End-Yolov5-Detection
+
+
+$ code .
+
+
+#### Potential Errors #####
+
+1. Error #15: Initializing libiomp5md.dll, but found libiomp5 already initialized.
+OMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous, since it can degrade performance or cause incorrect results. 
+The best thing to do is to ensure that only a single OpenMP runtime is linked into the process, e.g. by avoiding static linking of the OpenMP runtime in any library. 
+As an unsafe, unsupported, undocumented workaround you can set the environment variable KMP_DUPLICATE_LIB_OK=TRUE to allow the program to continue to execute, but that may cause crashes or silently produce incorrect results. 
+
+This appears to work, and is the most common solution, but Intel warns this could cause issues. The problem is multiple copies of the DLL. Two better solutions on this stack overflow 247 directly fix that:
+
+Delete the copy of libiomp5md.dll in your virtual env.
+Uninstall/reinstall mkl-dependent packages in your virtual env, esp. numpy.
+Common virtual env locations:
+
+C:\Users****\Anaconda3\Library\bin
+C:\Users***\Anaconda3\envs***\Library\bin\
+C:\Users*>**.conda\envs***\Library\bin\
+That worked for me.
+
+It seems numpy is a frequent source of the extra copy. Some found that a simple pip uninstall numpy followed by pip install numpy fixed it. (I’m not sure why it does.)
+
+
+2. 
+
+https://stackoverflow.com/questions/62056294/github-folders-have-a-white-arrow-on-them
+
+$ git rm --cache yolov5
+$ git status
+$ git add yolov5
+$ git commit -m "yolov5 folder"
+
+
+
